@@ -21,6 +21,7 @@ PROFESSIONS = [
     "🚛 Водитель снабжения",
     "💥 Артиллерист (заряжающий, наводчик, механик)",
     "🛡️ Специалист ПВО",
+    "️🪖 Танкист",
     "⚔️ Боец штурмового отряда"
 ]
 
@@ -118,8 +119,15 @@ def process_age(message):
 
     try:
         age = int(message.text)
-        if age <= 0 or age > 120:
-            raise ValueError
+        if age < 18 or age > 65:
+            msg = bot.send_message(
+                chat_id,
+                "❌ Возраст должен быть от 18 до 65 лет. Пожалуйста, введите корректный возраст:",
+                reply_markup=get_cancel_keyboard()
+            )
+            bot.register_next_step_handler(msg, process_age)
+            return
+
         user_data[chat_id].age = age
 
         msg = bot.send_message(
@@ -131,7 +139,7 @@ def process_age(message):
     except ValueError:
         msg = bot.send_message(
             chat_id,
-            "❌ Некорректный возраст! Введите число от 1 до 120.",
+            "❌ Некорректный возраст! Введите число от 18 до 65.",
             reply_markup=get_cancel_keyboard()
         )
         bot.register_next_step_handler(msg, process_age)
@@ -223,7 +231,7 @@ def process_diseases(message):
     if send_email(email_text):
         bot.send_message(
             chat_id,
-            "✅ Данные успешно отправлены! Спасибо!\n\n"
+            "✅ Данные успешно отправлены!\n📞 С вами свяжутся в ближайшее время!\n\n"
             "Если хотите заполнить анкету заново, нажмите /start",
             reply_markup=get_main_keyboard()
         )
