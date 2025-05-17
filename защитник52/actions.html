@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>родину-люблю</title>
+</head>
+<body>
+    <div class="black_menu_bg"><div class="menu-button"></div></div>
+    <div class="menu">
+      <div class="container">
+          <nav class="items" id="menuItems">
+              <ul class="list_of_items">
+                <a href="index.html" class="link_menu"><li class="item logo-item"><h1 class="logo">РОДИНУ-ЛЮБЛЮ</h1></li></a>
+                  <a href="vacation.html" class="link_menu"><li class="item">Вакансии</li></a>
+                  <a href="earning.html" class="link_menu"><li class="item">Довольствие</li></a>
+                  <a href="restrictions.html" class="link_menu"><li class="item">Ограничения</li></a>
+                  <a href="conditions.html" class="link_menu"><li class="item">Условия</li></a>
+                  <a href="actions.html" class="link_menu"><li class="item">Что делать?</li></a>
+                  <li class="item contact-item">
+                      <div class="take_offer">
+                          <p class="number"><b id="rotatingPhoneNumber"></b></p>
+                          <p class="take">Заключить контракт</p>
+                      </div>
+                  </li>
+              </ul>
+          </nav>
+      </div>
+  </div>
+    <div class="neo-container">
+        <div class="neo-card">
+            <h2 class="neo-section-title">Пошагово пройдем по вашим дальнейшим действиям:</h2>
+            
+            <h3>1. Проверь себя, проходишь ли ты по требованиям?</h3>
+            
+            <h3>2. Проверь, все ли есть документы?</h3>
+            <ul class="neo-list">
+                <li class="neo-list-item"><span class="neo-important">Оригинал действующего паспорта и его копия ‼️Обязательно‼️</span></li>
+                <li class="neo-list-item"><span class="neo-important">СНИЛС ‼️Обязательно‼️</span></li>
+                <li class="neo-list-item"><span class="neo-important">ИНН ‼️Обязательно‼️</span></li>
+                
+                <li class="neo-list-item">Оригинал военного билета, если нет военника - 2 фотографии 3х4 (черно-белые, без уголка) для нового военника; (По возможности)</li>
+
+                <li class="neo-list-item">Профессиональное водительское удостоверение В-С,Д,Е (при наличии)</li>
+                <li class="neo-list-item">Копии документов одного из близких родственников - паспорт (стр. 2,3,5); ИНН; СНИЛС; документ,  реквизиты банковского счета родственника. (По возможности)</li>
+            </ul>
+        </div>
+
+        <div class="neo-card">
+            <h2 class="neo-section-title">Дальнейшие действия:</h2>
+            <ul class="neo-list">
+                <li class="neo-list-item">Оставляте заявку на сайте</li>
+                <li class="neo-list-item">Покупаем билет до города подписания на любой транспорт за счет государства, билет получаете в электронном виде</li>
+            </ul>
+            
+            <div class="neo-contact">
+                Номер для связи: <span id="rotatingPhoneNumberSvaz">+7 995 282-68-67</span>
+            </div>
+        </div>
+
+        <div class="neo-card">
+            <h2 class="neo-section-title">Что взять с собой:</h2>
+            <ul class="neo-list">
+                <li class="neo-list-item">Предметы личной гигиены</li>
+                <li class="neo-list-item">Трусы, футболки, носки на первые пять дней </li>
+                <li class="neo-list-item">Медикаменты (персонально)</li>
+                <li class="neo-list-item">Телефон (можно любой)</li>
+                <li class="neo-list-item">Все снаряжение выдадут в военной части (при жилании можете брать своё)</li>
+            </ul>
+        </div>
+
+        <div class="neo-card">
+            <h2 class="neo-section-title">Процесс оформления:</h2>
+            <ul class="neo-list">
+                <li class="neo-list-item">Заполняйте форму на сайте/звоните по горячей линии</li>
+                <li class="neo-list-item">Присылаете на WhatsApp фотографии документов, дату отправки и город откуда будете выезжать</li>
+                <li class="neo-list-item">Получаете билет в электронном виде, садитесь на транспорт в указаный в билете день</li>
+                <li class="neo-list-item">На вокзале в городе подписания вас встречает водитель</li>
+                <li class="neo-list-item">Проходите оформление бумаг и медкомиссию в военкомате</li>
+                <li class="neo-list-item">Подписываете контракт и убываете в учебную часть</li>
+            </ul>
+        </div>
+
+        <div class="neo-card">
+            <h2 class="neo-section-title">Остались вопросы?</h2>
+            <p>Телефон: <span id="rotatingPhone">+7 995 282-68-67</span></p>
+        </div>
+    </div>
+    <div class="black-form-section" id="anc">
+      <div class="form-container">
+        <h2 class="form-title">Анкета кандидата</h2>
+        <p class="form-subtitle">Заполните данные для заключения контракта</p>
+        
+        <div class="black-form-section" id="anc">
+          <div class="form-container">
+            <h2 class="form-title">Анкета кандидата</h2>
+            <p class="form-subtitle">Заполните данные для заключения контракта</p>
+            
+            <form id="candidateForm" class="candidate-form" action="https://formspree.io/f/manoqkyp" method="POST">
+              <div class="form-row">
+                <div class="form-group">
+                  <input type="text" name="ФИО" placeholder="ФИО" required class="form-input">
+                </div>
+  
+              <div class="form-row">
+                <div class="form-group">
+                  <input type="tel" name="Номер телефона" placeholder="Номер телефона" required class="form-input">
+                </div>
+              </div>
+  
+              <div class="form-group">
+                <input type="text" name="Желаемая специальность" placeholder="Желаемая специальность" required class="form-input">
+              </div>
+              
+              <div class="form-footer">
+                <button type="submit" class="submit-btn">Отправить анкету</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<script src="app.js"></script>
+</body>
+</html>
